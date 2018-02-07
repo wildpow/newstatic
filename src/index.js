@@ -1,7 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-
+if (typeof window !== 'undefined') {
+  const WebFont = require('webfontloader');
+  WebFont.load({
+    google: {
+      families: ['Open Sans', 'Roboto:bold']
+    }
+  });
+}
 // Your top level component
 import App from './App'
 
